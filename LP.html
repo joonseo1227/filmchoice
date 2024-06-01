@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>협노시스: LP 커버의 전설</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('LP.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">협노시스: LP 커버의 전설</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.01.</dd>
+                            <dt>등급</dt>
+                            <dd>15세</dd>
+                            <dt>장르</dt>
+                            <dd>다큐멘터리</dd>
+                            <dt>국가</dt>
+                            <dd>영국</dd>
+                            <dt>러닝타임</dt>
+                            <dd>101분</dd>
+                            <dt>배급</dt>
+                            <dd>티캐스트</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20235921'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="LP.jpg" class="highlight-img" alt="협노시스: LP 커버의 전설">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">핑크 플로이드, 레드 제플린, 폴 매카트니, 피터 가브리엘 등 세계 최고 뮤지션들의 앨범 커버를 만든 디자인 스튜디오 ‘힙노시스’. 영감에 한계가 없던 두 천재 디자이너의 무모한 작업 스토리, 그리고 시대의 아이콘이 된 명반들의 탄생 뒷이야기</p>
+        <h2>감독</h2>
+        <p>안톤 코르빈</p>
+        <h2>출연</h2>
+        <p>오브리 포웰,스톰 소거슨</p>
+        <h2>누적 관객수</h2>
+        <p>0.6만명</p>
+        <h2>평점</h2>
+        <p>7.58</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

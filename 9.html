@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쿵푸팬더</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('9.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">쿵푸팬더</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.04.10.</dd>
+                            <dt>등급</dt>
+                            <dd>전체</dd>
+                            <dt>장르</dt>
+                            <dd>애니메이션</dd>
+                            <dt>국가</dt>
+                            <dd>미국</dd>
+                            <dt>러닝타임</dt>
+                            <dd>94분</dd>
+                            <dt>배급</dt>
+                            <dd>유니버설 픽쳐스</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20236614'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="9.jpg" class="highlight-img" alt="쿵푸팬더">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">오랜만이지! 드림웍스 레전드 시리즈 마침내 컴백! 마침내 내면의 평화… 냉면의 평화…가 찾아왔다고 믿는 용의 전사 ‘포’ 이젠 평화의 계곡의 영적 지도자가 되고, 자신을 대신할 후계자를 찾아야만 한다. “이제 용의 전사는 그만둬야 해요?” 용의 전사로의 모습이 익숙해지고 새로운 성장을 하기보다 지금 이대로가 좋은 ‘포’ 하지만 모든 쿵푸 마스터들의 능력을 그대로 복제하는 강력한 빌런 ‘카멜레온’이 나타나고 그녀를 막기 위해 정체를 알 수 없는 쿵푸 고수 ‘젠’과 함께 모험을 떠나게 되는데… 포는 가장 강력한 빌런과 자기 자신마저 뛰어넘고 진정한 변화를 할 수 있을까?</p>
+        <h2>감독</h2>
+        <p>마이크 미첼,스테파니 스티네</p>
+        <h2>출연</h2>
+        <p>잭 블랙,아콰피나</p>
+        <h2>누적 관객수</h2>
+        <p>176만명</p>
+        <h2>평점</h2>
+        <p>7.11</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

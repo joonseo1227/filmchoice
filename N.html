@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미지수</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('N.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">미지수</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.08.</dd>
+                            <dt>등급</dt>
+                            <dd>12세</dd>
+                            <dt>장르</dt>
+                            <dd>드라마</dd>
+                            <dt>국가</dt>
+                            <dd>한국</dd>
+                            <dt>러닝타임</dt>
+                            <dd>69분</dd>
+                            <dt>배급</dt>
+                            <dd>인디스토리</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href=''">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="N.jpg" class="highlight-img" alt="미지수">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">헤어진 연인을 사무치게 그리워하는 ‘지수’ 실수로 사람을 죽이고 붕괴 직전인 ‘우주’ 우주선 발사 뉴스에 집착하는 ‘기완’ 비가 오면 발작하는 남편 때문에 괴로운 ‘인선’ 베란다에 장총을 두고 살아가는 ‘신애’ “나 혼자 우주를 떠다니고 있어. 나 좀 꺼내줘” 삶의 궤도에서 이탈한 다섯 인물들의 미지의 슬픔 그리고 미지의 시간</p>
+        <h2>감독</h2>
+        <p>이돈구</p>
+        <h2>출연</h2>
+        <p>권잎새</p>
+        <h2>누적 관객수</h2>
+        <p>0.1만명</p>
+        <h2>평점</h2>
+        <p>8.14</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

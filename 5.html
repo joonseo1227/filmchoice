@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정욕</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('5.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">정욕</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.30.</dd>
+                            <dt>등급</dt>
+                            <dd>15세</dd>
+                            <dt>장르</dt>
+                            <dd>드라마</dd>
+                            <dt>국가</dt>
+                            <dd>일본</dd>
+                            <dt>러닝타임</dt>
+                            <dd>134분</dd>
+                            <dt>배급</dt>
+                            <dd>해피송</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Event/Info?eventId=2982&eventSort=-1'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="5.jpg" class="highlight-img" alt="정욕">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">사회적인 연결의 중요성을 믿는 검사 ‘히로키’는 유튜버가 되기 위해 등교를 거부하는 아들로 골머리를 앓는다. 타인과의 연결을 거부하던 ‘나쓰키’는 동창생 ‘요시미치’의 귀향 소식을 듣고 학창 시절 기억을 떠올리며 마음이 흔들리기 시작한다. ‘다이야’는 대학교 댄스 동아리 활동으로 주목받고 있지만 스스로를 구제 불능이라 부르며 이성과의 만남을 거절하는데. 이성 관계에 트라우마가 있는 ‘야에코’는 ‘다이야’에게 알 수 없는 이끌림을 느낀다. 다른 장소, 다른 삶을 사는 이들은 누구도 예상치 못한 이유로 서로 얽히게 되는데… “’후지와라 사토루’가 물을 틀어둔 채로 수도꼭지를 훔쳤다” 15년 전 지방 신문에 보도된 작은 신문 기사 한 줄. 그리고 그 기사 속 숨겨진 이면이 모두의 일상을 뒤흔든다. 서로 다른 삶, 서로 다른 욕망, 그리고 다가오는 일상의 파문 바른 욕망이란 무엇인가.</p>
+        <h2>감독</h2>
+        <p>키시 요시유키,이나가키 고로</p>
+        <h2>출연</h2>
+        <p>아라가키 유이</p>
+        <h2>누적 관객수</h2>
+        <p>0.08만명</p>
+        <h2>평점</h2>
+        <p>9.5</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

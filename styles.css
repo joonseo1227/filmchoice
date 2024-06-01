@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-menu {
+    visibility: hidden;
+    position: absolute;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(0);
+    transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s;
+}
+
+.dropdown-menu.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(10px);
+}
+
+.dropdown-menu button {
+    text-decoration: none;
+    display: block;
+    border: none;
+    width: 280px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.dropdown-menu button:hover {
+    filter: brightness(120%);
+}
+
+.dropdown-menu .cgv-button {
+    background-color: #ED3124;
+}
+
+.dropdown-menu .lottecinema-button {
+    background-color: #E60012;
+}
+
+.dropdown-menu .megabox-button {
+    background-color: #342567;
+}
+
+.dropdown-menu .cineq-button {
+    background-color: #E60012;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #ffffff;
+    padding-top: 64px;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 9999;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    height: 64px;
+    background-color: #1c1c1c;
+}
+
+a {
+    text-decoration: none;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 64px;
+    color: white;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 32px;
+    margin-right: 64px;
+}
+
+nav a {
+    color: #c6c6c6;
+    text-decoration: none;
+    font-size: 16px;
+    margin-left: 32px;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+.highlight {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 560px;
+}
+
+.highlight-bg {
+    filter: brightness(50%) blur(32px);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    background-image: url('O.jpg');
+}
+
+.highlight-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    z-index: 2;
+}
+
+.highlight-text {
+    max-width: 640px;
+    color: #f4f4f4;
+    padding-left: 128px;
+}
+
+.highlight-img {
+    padding-right: 128px;
+}
+
+.highlight-logo {
+    height: 80px;
+    margin-bottom: 32px;
+}
+
+.highlight p {
+    font-size: 18px;
+    margin-bottom: 80px;
+    word-wrap: break-word;
+    text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+    line-height: 24px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    margin-bottom: 96px;
+}
+
+.highlight button {
+    margin-right: 8px;
+    padding: 16px 24px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: rgba(244, 244, 244, 0.3);
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.highlight button:hover {
+    transform: scale(1.1);
+}
+
+.highlight button:active {
+    transform: scale(1);
+    transition: transform 0.05s ease;
+    filter: brightness(60%);
+}
+
+.highlight button.book-button {
+    color: #161616;
+    background-color: #f4f4f4;
+
+}
+
+.highlight-img {
+    height: 400px;
+    z-index: 2;
+}
+
+h2 {
+    margin: 64px 0px 0px 64px;
+    font-size: 24px;
+}
+
+.movie-list {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-top: 16px;
+    padding-left: 64px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.movie-list::-webkit-scrollbar {
+    display: none;
+}
+
+.movie {
+    width: 160px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    margin-right: 32px;
+    margin-bottom: 64px;
+}
+
+.movie img {
+    width: 160px;
+}
+
+.movie:hover {
+    transform: scale(1.1);
+}
+
+.movie:active {
+    transform: scale(1);
+    transition: transform 0.05s ease;
+    filter: brightness(60%);
+}
+
+.movie p {
+    color: #f4f4f4;
+    margin-top: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+footer {
+    background-color: #1c1c1c;
+    margin-top: 64px;
+    padding: 32px 0px 32px 64px;
+}
+
+.footer-message {
+    font-size: 14px;
+    color: #8d8d8d;
+    margin-bottom: 8px;
+}
+
+.footer-contact {
+    font-size: 14px;
+    color: #8d8d8d;
+}

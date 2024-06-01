@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>난 엄청 창의적인 휴머니스트 뱀파이어가 될 거야</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('D.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">난 엄청 창의적인 휴머니스트 뱀파이어가 될 거야</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.29.</dd>
+                            <dt>등급</dt>
+                            <dd>12세</dd>
+                            <dt>장르</dt>
+                            <dd>멜로,로맨스</dd>
+                            <dt>국가</dt>
+                            <dd>캐나다</dd>
+                            <dt>러닝타임</dt>
+                            <dd>91분</dd>
+                            <dt>배급</dt>
+                            <dd>㈜트리플픽쳐스</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href=''">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="D.jpg" class="highlight-img" alt="난 엄청 창의적인 휴머니스트 뱀파이어가 될 거야">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">인간을 죽이고 싶지 않은 마음 약한 뱀파이어 소녀 ‘사샤’ 사는 게 별로 재미없는 외톨이 소년 ‘폴’ 좋은 일엔 기꺼이 죽을 수 있는 ‘폴’은 흔쾌히 ‘사샤’의 일용할 양식(?)이 되기로 한다. 막상 죽이려니 미안한 ‘사샤’는 ‘폴’의 마지막 소원을 들어주기로 하는데...</p>
+        <h2>감독</h2>
+        <p>아리안 루이스</p>
+        <h2>출연</h2>
+        <p>사라 몽페티,펠릭스 앙투안</p>
+        <h2>누적 관객수</h2>
+        <p>0.06만명</p>
+        <h2>평점</h2>
+        <p>8.67</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

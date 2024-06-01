@@ -1,0 +1,64 @@
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    /* 남은 공간을 차지하게 함 */
+}
+
+.search-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+input {
+    height: 40px;
+    width: 400px;
+    background-color: #393939;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    color: #f4f4f4;
+    padding-left: 16px;
+    margin-right: 16px;
+}
+
+#results {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    margin: 20px;
+    width: 100%;
+    max-width: 1200px;
+    justify-content: center;
+}
+
+.movie {
+    width: 160px;
+    text-align: center;
+    transition: transform 0.2s ease;
+    margin-right: 32px;
+    margin-bottom: 64px;
+}
+
+.movie img.poster {
+    max-width: 100%;
+    height: auto;
+}
+
+.movie p {
+    color: #f4f4f4;
+    margin-top: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}

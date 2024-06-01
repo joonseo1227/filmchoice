@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아침이 오면 공허해진다</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('X.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">아침이 오면 공허해진다</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.29.</dd>
+                            <dt>등급</dt>
+                            <dd>12세</dd>
+                            <dt>장르</dt>
+                            <dd>드라마</dd>
+                            <dt>국가</dt>
+                            <dd>일본</dd>
+                            <dt>러닝타임</dt>
+                            <dd>75분</dd>
+                            <dt>배급</dt>
+                            <dd>와이드 릴리즈㈜</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20249403'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="X.jpg" class="highlight-img" alt="아침이 오면 공허해진다">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">사소하고 우연한 찰나들이 모인다. 공허한 일상이 채워지기 시작한다. 말수 적고 낯가리는 내향형 인간 ‘이이즈카’(카라타 에리카). 취업 후 적응하지 못해 회사를 그만두고 편의점 아르바이트로 하루하루 지내고 있지만 가족들은 그런 그녀의 상황을 모른다. 아침에 눈뜰 때마다 공허한 감정을 느끼던 어느 날, 중학교 때 같은 반 친구였던 ‘오오토모’(이모우 하루카)’와 우연히 재회하게 되는 ‘이이즈카’. 오랜만에 만나는 동창이 어색하다가도 점차 두 사람은 다시 그때 그 여중생 시절처럼 즐거운 시간을 쌓아 가는데...</p>
+        <h2>감독</h2>
+        <p>유호 이시바시</p>
+        <h2>출연</h2>
+        <p>카라타 에리카,이모우 하루카</p>
+        <h2>누적 관객수</h2>
+        <p>0.07만명</p>
+        <h2>평점</h2>
+        <p>9.86</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

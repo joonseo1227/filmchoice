@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>낸 골딘, 모든 아름다움과 유혈사태</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('B.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">낸 골딘, 모든 아름다움과 유혈사태</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.15</dd>
+                            <dt>등급</dt>
+                            <dd>15세</dd>
+                            <dt>장르</dt>
+                            <dd>다큐멘터리</dd>
+                            <dt>국가</dt>
+                            <dd>미국</dd>
+                            <dt>러닝타임</dt>
+                            <dd>122분</dd>
+                            <dt>배급</dt>
+                            <dd>찬란</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href=''">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="B.jpg" class="highlight-img" alt="낸 골딘, 모든 아름다움과 유혈사태">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">전설적인 사진작가 낸 골딘의 삶, 예술, 투쟁, 그리고 생존 언니가 스스로 목숨을 끊은 후, 사진은 나의 유일한 언어였다. 나는 생생하게 반짝이는 뉴욕에서 죽어가는 친구들의 아름다운 모습을 포착했고, 있는 그대로의 내 얼굴을 솔직하게 담아냈다. 이제는 내 모든 명성을 걸고 거대 제약회사에 맞서 싸운다. 생존과 투쟁의 기록이 담긴 나의 일기장을 당신에게 펼쳐 보인다.</p>
+        <h2>감독</h2>
+        <p>로라 포이트라스</p>
+        <h2>출연</h2>
+        <p>낸 골딘</p>
+        <h2>누적 관객수</h2>
+        <p>0.5만명</p>
+        <h2>평점</h2>
+        <p>8.27</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

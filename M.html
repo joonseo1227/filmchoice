@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목화솜 피는 날</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('M.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">목화솜 피는 날</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.22.</dd>
+                            <dt>등급</dt>
+                            <dd>12세</dd>
+                            <dt>장르</dt>
+                            <dd>드라마</dd>
+                            <dt>국가</dt>
+                            <dd>한국</dd>
+                            <dt>러닝타임</dt>
+                            <dd>90분</dd>
+                            <dt>배급</dt>
+                            <dd>㈜스튜디오 디에이치엘</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20249490'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="M.jpg" class="highlight-img" alt="목화솜 피는 날">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">멈춰있는 세월을 넘어 다시 피어나자, 우리" 10년 전 참혹한 사고로 '경은'을 잃고 기억을 점차 잃어가는 '병호'. 무기력함에 갇혀있던 아내 '수현'은 고통을 견디느라 이를 외면한다. 어느 날, 묵묵히 견디던 첫째 딸 '채은'의 참아왔던 두려움이 터져 나온다. "아빠마저 잃을까 봐 두려워..." 각자의 방식으로 '경은'을 기억하며 아픔을 묻던 그들은 멈춰버린 세월을 다시 되찾고자 한다.</p>
+        <h2>감독</h2>
+        <p>신경수</p>
+        <h2>출연</h2>
+        <p>박원상,우미화</p>
+        <h2>누적 관객수</h2>
+        <p>0.3만명</p>
+        <h2>평점</h2>
+        <p>9.52</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오늘부터 댄싱퀸</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('F.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">오늘부터 댄싱퀸</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.29.</dd>
+                            <dt>등급</dt>
+                            <dd>전체</dd>
+                            <dt>장르</dt>
+                            <dd>드라마</dd>
+                            <dt>국가</dt>
+                            <dd>노르웨이</dd>
+                            <dt>러닝타임</dt>
+                            <dd>92분</dd>
+                            <dt>배급</dt>
+                            <dd>그린나래미디어(주)</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20233508'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="F.jpg" class="highlight-img" alt="오늘부터 댄싱퀸">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">16만 팔로워를 가진 힙합 댄서 E.D.윈에게 첫눈에 반한 12살 소녀 미나는 운 좋게 오디션을 통과하고 E.D.윈의 댄스 크루에 들어간다. 공부와 달리 마음대로 되지 않는 몸에 인생 첫 좌절을 마주한 미나. 하지만 포기란 없다! 한때 춤으로 이름 좀 날렸던 할머니의 지도하에 남사친 마르쿠스와 비밀스러운 연습을 시작하는데… 함께라면 할 수 있어! ★오늘부터 댄싱퀸★</p>
+        <h2>감독</h2>
+        <p>오로라 고세</p>
+        <h2>출연</h2>
+        <p>리브 엘비라 쉬퍼순 라르손,스툴라 하르비츠</p>
+        <h2>누적 관객수</h2>
+        <p>0.1만명</p>
+        <h2>평점</h2>
+        <p>9</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

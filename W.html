@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>차이콥스키의 아내</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('W.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">차이콥스키의 아내</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.01.</dd>
+                            <dt>등급</dt>
+                            <dd>청소년관람불가</dd>
+                            <dt>장르</dt>
+                            <dd>멜로,로맨스</dd>
+                            <dt>국가</dt>
+                            <dd>러시아</dd>
+                            <dt>러닝타임</dt>
+                            <dd>143분</dd>
+                            <dt>배급</dt>
+                            <dd>(주)엣나인필름</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20231416'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="W.jpg" class="highlight-img" alt="차이콥스키의 아내">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">“신이 주신 영원한 남편이에요 차이콥스키의 아내, 그게 내 운명이에요” 19세기 러시아 모스크바 귀족 가문 출신의 안토니나. 러시아 최고의 작곡가 차이콥스키, 그를 처음 봤던 날부터 원하는 건 단 하나. 그의 명성도, 소문 따위도 중요치 않았다. 오직 차이콥스키의 아내, 당신 곁에서 끝까지 이 사랑을 지키겠습니다.</p>
+        <h2>감독</h2>
+        <p>키릴 세레브렌니코프</p>
+        <h2>출연</h2>
+        <p>일리오나 미하일,오딘 런드바이런</p>
+        <h2>누적 관객수</h2>
+        <p>0.6만명</p>
+        <h2>평점</h2>
+        <p>6.65</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

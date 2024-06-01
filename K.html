@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라파엘로. 예술의 군주</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('K.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">라파엘로. 예술의 군주</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.30.</dd>
+                            <dt>등급</dt>
+                            <dd>전체</dd>
+                            <dt>장르</dt>
+                            <dd>다큐멘터리</dd>
+                            <dt>국가</dt>
+                            <dd>이탈리아,프랑스</dd>
+                            <dt>러닝타임</dt>
+                            <dd>89분</dd>
+                            <dt>배급</dt>
+                            <dd>X</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href=''">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="K.jpg" class="highlight-img" alt="라파엘로. 예술의 군주">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">라파엘로 서거 500주년을 기념하여 제작. 미켈란젤로와 레오나르도 다 빈치와 함께 르네상스를 대표하는 3인의 거장으로 꼽히는 “신동(神童)” 라파엘로 산치오(1483~1520)에 대한 다큐멘터리. 바티칸 박물관의 “라파엘로의 방”과 일반인에게 공개되지 않았던 바티칸 시국의 사도 궁전에 있는 “라파엘로의 로지아”에 대한 독점 촬영을 포함하여 총 20개 장소와 50점 이상의 작품을 최첨단 4K로 촬영.</p>
+        <h2>감독</h2>
+        <p>루카 비오토</p>
+        <h2>출연</h2>
+        <p>엔리코 로 베르소 ,  플라비오 파렌티</p>
+        <h2>누적 관객수</h2>
+        <p>0.03만명</p>
+        <h2>평점</h2>
+        <p>X</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

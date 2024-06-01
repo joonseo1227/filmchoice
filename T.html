@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>쇼생크 탈출</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('T.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">쇼생크 탈출</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.08.</dd>
+                            <dt>등급</dt>
+                            <dd>15세</dd>
+                            <dt>장르</dt>
+                            <dd>드라마</dd>
+                            <dt>국가</dt>
+                            <dd>미국</dd>
+                            <dt>러닝타임</dt>
+                            <dd>142분</dd>
+                            <dt>배급</dt>
+                            <dd>(주)팝엔터에인먼트</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=19950084'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="T.jpg" class="highlight-img" alt="쇼생크 탈출">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">아내와 그 불륜상대를 살해했다는 누명을 쓰고 두 번의 종신형을 선고받은 엘리트 은행가 ‘앤디’는 악명 높은 교도소 ‘쇼생크’에 수감된다. 남은 평생을 살아야 할 그곳에는 끔찍한 폭력과 무기력한 시간만이 존재한다. 그럼에도 ‘앤디’는 인간다움을 잃지 않으려, 삶의 의미를 찾으려 노력한다. 금지 물품을 유통하는 장기 복역수 ‘레드’와 우정을 쌓고, 보잘것없는 도서관을 50년간 지켜온 ‘브룩스’와 새 공간을 꾸리고, 검정고시를 준비하는 청년 ‘토미’의 선생님이 되어주는 ‘앤디’. 게다가, 우연히 교도관의 세금 컨설팅을 도운 계기로 교도소장의 돈세탁까지 맡게 되는데… 그가 일궈낸 교도소의 작은 균열이 점차 큰 파장을 몰고온다! “선택은 하나밖에 없어요. 바쁘게 살든가, 바쁘게 죽든가요.”</p>
+        <h2>감독</h2>
+        <p>프랭크 다라본트</p>
+        <h2>출연</h2>
+        <p>팀 로빈스,모건 프리먼</p>
+        <h2>누적 관객수</h2>
+        <p>5만명</p>
+        <h2>평점</h2>
+        <p>9.61</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

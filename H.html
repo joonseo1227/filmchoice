@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>드림 시나리오</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('H.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">드림 시나리오</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.29.</dd>
+                            <dt>등급</dt>
+                            <dd>15세</dd>
+                            <dt>장르</dt>
+                            <dd>코미디</dd>
+                            <dt>국가</dt>
+                            <dd>미국</dd>
+                            <dt>러닝타임</dt>
+                            <dd>102분</dd>
+                            <dt>배급</dt>
+                            <dd>㈜올랄라스토리,메가박스중앙㈜</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20248879'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="H.jpg" class="highlight-img" alt="드림 시나리오">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">소심하고,한심하고,평범 그 자체여서 언제 어디서나 존재감 없는 ‘폴’로 인해 온 세상이 떠들썩해진다! 왜?그가 지구상 모두의 꿈에 나타나고 있기 때문에! “실존 인물 맞나요?왜 당신 꿈을 꾸죠?도대체 누구세요?” SNS메시지 폭주,인터뷰 출연,광고 모델 요청은 물론, 심지어 꿈속 만남이 현실로 이어지는 기막힌 일까지! 꿈속 남자에서 모두가 꿈꾸는 남자로 거듭난 ‘폴’! 하지만 갑자기 그가 등장하는 모든 꿈들이 악몽이 되는데…</p>
+        <h2>감독</h2>
+        <p>크리스토 퍼 보글리</p>
+        <h2>출연</h2>
+        <p>니콜라스 케이지,줄리안 니콜슨</p>
+        <h2>누적 관객수</h2>
+        <p>1.3만명</p>
+        <h2>평점</h2>
+        <p>6.56</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

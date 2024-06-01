@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>악마와의 토크쇼</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('Z.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">악마와의 토크쇼</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.08.</dd>
+                            <dt>등급</dt>
+                            <dd>15세</dd>
+                            <dt>장르</dt>
+                            <dd>공포</dd>
+                            <dt>국가</dt>
+                            <dd>오스트레일리아</dd>
+                            <dt>러닝타임</dt>
+                            <dd>93분</dd>
+                            <dt>배급</dt>
+                            <dd>(주)올랄라스토리</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20249317'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="Z.jpg" class="highlight-img" alt="악마와의 토크쇼">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction"><핼러윈 특집 생방송 ‘올빼미 쇼’> - 오늘의 큐시트 1부 출연자 - 영매 VS. 영능력자 사냥꾼 “기적의 사나이라 불리는 영매, 초자연 현상의 실체를 밝히는 마술사 출신 회의론자. 과연 진실은?” (*중간 광고 후 2부 시작*) 2부 출연자 - 악마에게 빙의된 소녀 & [악마와의 대화] 저술한 초심리학자 “사탄교회 집단자살에서 유일하게 살아남은 소녀, 악마에게 빙의됐다는 것이 사실인지 현장 검증!” 1977년 핼러윈 전날 밤, 시청률을 위해서라면 일단 틀고 보는 방송국 놈들 때문에 누구도 예상하지 못한 방송사고 발생! 그리고 마침내 미국 전역을 충격에 빠트렸던 그날 밤의 생방송 ‘악마와의 토크쇼’ 녹화영상이 최근에 발견됐는데… 47년간 숨겨진, 절대 생중계돼서는 안 될 최악의 토크쇼가 마침내 공개된다. 그동안 공개되지 않은 비하인드 영상과 함께!</p>
+        <h2>감독</h2>
+        <p>캐머런 카이네스</p>
+        <h2>출연</h2>
+        <p>콜린 카이네스,데이빗 다스트 말치안</p>
+        <h2>누적 관객수</h2>
+        <p>8.3만명</p>
+        <h2>평점</h2>
+        <p>7.65</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>창가의 토토</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('10.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">창가의 토토</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.09.</dd>
+                            <dt>등급</dt>
+                            <dd>전체</dd>
+                            <dt>장르</dt>
+                            <dd>애니메이션,드라마</dd>
+                            <dt>국가</dt>
+                            <dd>일본</dd>
+                            <dt>러닝타임</dt>
+                            <dd>114분</dd>
+                            <dt>배급</dt>
+                            <dd>(주)디스테이션</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20248617'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="10.jpg" class="highlight-img" alt="창가의 토토">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">남들과 조금 다르다는 이유로 다니던 초등학교에서 쫓겨나게 된 ‘토토’는 엄격한 규율로 가르치는 이전 학교와 달리, 있는 그대로의 ‘토토’를 품어주는 새로운 학교로 가게 된다. 인자한 교장 선생님, 전차로 만들어진 교실, 다양한 친구들과 함께하는 그곳에서 ‘토토’는 모든 것이 새롭고 설레는 나날을 맞이하는데… 사랑스러운 토토의 세계로 초대합니다!</p>
+        <h2>감독</h2>
+        <p>야쿠와 신노스케</p>
+        <h2>출연</h2>
+        <p>오노 리리아나, 야쿠쇼 코지</p>
+        <h2>누적 관객수</h2>
+        <p>0.3만명</p>
+        <h2>평점</h2>
+        <p>9.25</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

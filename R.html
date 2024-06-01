@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설계자</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('R.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">설계자</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.29.</dd>
+                            <dt>등급</dt>
+                            <dd>15세</dd>
+                            <dt>장르</dt>
+                            <dd>범죄,드라마</dd>
+                            <dt>국가</dt>
+                            <dd>한국</dd>
+                            <dt>러닝타임</dt>
+                            <dd>99분</dd>
+                            <dt>배급</dt>
+                            <dd>(주)NEW</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20234045'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="R.jpg" class="highlight-img" alt="설계자">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">“정말 우연이라고 생각해요?” 의뢰받은 청부 살인을 사고사로 조작하는 설계자 ‘영일’(강동원) 그의 설계를 통해 우연한 사고로 조작된 죽음들이 실은 철저하게 계획된 살인이라는 것을 아무도 알지 못한다. 최근의 타겟 역시 아무 증거 없이 완벽하게 처리한 ‘영일’에게 새로운 의뢰가 들어온다. 이번 타겟은 모든 언론과 세상이 주목하고 있는 유력 인사. 작은 틈이라도 생기면 자신의 정체가 발각될 수 있는 위험한 의뢰지만 ‘영일’은 그의 팀원인 ‘재키’(이미숙), ‘월천’(이현욱), ‘점만’(탕준상)과 함께 이를 맡기로 결심한다. 철저한 설계와 사전 준비를 거쳐 마침내 실행에 옮기는 순간 ‘영일’의 계획에 예기치 못한 변수가 발생하는데...! 사고인가 살인인가 그의 실체가 드러나기 시작했다!</p>
+        <h2>감독</h2>
+        <p>이요섭</p>
+        <h2>출연</h2>
+        <p>강동원,이무생</p>
+        <h2>누적 관객수</h2>
+        <p>17만명</p>
+        <h2>평점</h2>
+        <p>6.01</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

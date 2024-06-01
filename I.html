@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>디피컬트</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('I.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">디피컬트</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.15.</dd>
+                            <dt>등급</dt>
+                            <dd>15세</dd>
+                            <dt>장르</dt>
+                            <dd>코미디,드라마</dd>
+                            <dt>국가</dt>
+                            <dd>프랑스</dd>
+                            <dt>러닝타임</dt>
+                            <dd>119분</dd>
+                            <dt>배급</dt>
+                            <dd>TCO(주)더콘텐츠온, (주)블루라벨픽쳐스</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20249741'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="I.jpg" class="highlight-img" alt="디피컬트">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">대출과 빚에 허덕이는 ‘브루노’와 ‘알베르’ TV 중고거래에서 우연히 만난 둘은 공짜 맥주와 감자칩에 이끌려 얼떨결에 환경 운동에 동참하고, 지구 온난화를 막기 위해 블랙 프라이데이에 반대하는 ‘캑터스’를 만나 환경 운동에 점점 진심이 되어가는데… 살기는 어렵지만 사랑은 하고 싶은 두 남자와 환경 문제 외에는 모든 것이 무감각한 여자까지… 갓생을 꿈꾸는 파리지앵 3인의 동상이몽 라이프가 시작된다!</p>
+        <h2>감독</h2>
+        <p>에릭 토레다노</p>
+        <h2>출연</h2>
+        <p>노에미 메를랑,피오 마르마이</p>
+        <h2>누적 관객수</h2>
+        <p>0.2만명</p>
+        <h2>평점</h2>
+        <p>7.3</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>별처럼 빛나는 너에게 더무비-일섬일섬량성성</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('P.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">별처럼 빛나는 너에게 더무비-일섬일섬량성성</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.22.</dd>
+                            <dt>등급</dt>
+                            <dd>12세</dd>
+                            <dt>장르</dt>
+                            <dd>판타지</dd>
+                            <dt>국가</dt>
+                            <dd>중국</dd>
+                            <dt>러닝타임</dt>
+                            <dd>107분</dd>
+                            <dt>배급</dt>
+                            <dd>워터홀컴퍼니㈜</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20249300'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="P.jpg" class="highlight-img" alt="별처럼 빛나는 너에게 더무비-일섬일섬량성성">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">2010년 여름, 온 우주가 네 눈에 숨어있어. 짝사랑해 온 ‘린베이싱’과 함께하기 위해 달착륙 기원 콘서트 자원봉사를 하게 된 ‘장완선’. 수능이 끝난 후 ‘장완선’은 드디어 ‘린베이싱’에게 고백할 계획을 세우지만 하나 둘 추억을 쌓으며 가까워지던 둘에게 돌이킬 수 없는 비극이 닥친다. 슬픔에 빠져 있던 ‘장완선’은 휴대폰 속 ‘린베이싱’의 이름을 찾아 그녀에게 보내지 못했던 문자 전송 버튼을 누르고 그 순간, 믿어지지 않는 이야기가 펼쳐진다. 엇갈린 시공간 속 너의 곁에 머물고 싶어.</p>
+        <h2>감독</h2>
+        <p>진소명,장반</p>
+        <h2>출연</h2>
+        <p>굴초소,장자닝</p>
+        <h2>누적 관객수</h2>
+        <p>0.23만명</p>
+        <h2>평점</h2>
+        <p>8.36</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

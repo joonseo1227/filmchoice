@@ -1,0 +1,114 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>청춘 18X2 너에게로 이어지는 길</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="movieDetailStyles.css">
+    <style>
+        .movie-details-bg {
+            background-image: url('8.jpg');
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="index.html">
+            <div class="logo">FilmChoice</div>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="search.html">검색</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="movie-details">
+            <div class="movie-details-bg"></div>
+            <div class="movie-details-content">
+                <div class="movie-details-text">
+                    <h1 class="movie-title">청춘 18X2 너에게로 이어지는 길</h1>
+                    <div class="movie-info">
+                        <dl>
+                            <dt>개봉</dt>
+                            <dd>2024.05.22.</dd>
+                            <dt>등급</dt>
+                            <dd>12세</dd>
+                            <dt>장르</dt>
+                            <dd>멜로,로맨스</dd>
+                            <dt>국가</dt>
+                            <dd>일본</dd>
+                            <dt>러닝타임</dt>
+                            <dd>124분</dd>
+                            <dt>배급</dt>
+                            <dd>㈜쇼박스</dd>
+                        </dl>
+                    </div>
+                    <button type="button" id="book-button">예매하기</button>
+                    <div id="dropdown-menu" class="dropdown-menu">
+                        <button class="cgv-button" onclick="window.location.href='http://www.cgv.co.kr/ticket/'">
+                            <img height="24" src="cgv.svg" />
+                        </button>
+                        <button class="lottecinema-button"
+                            onclick="window.location.href='https://www.lottecinema.co.kr/NLCHS/Ticketing'">
+                            <img height="24" src="lottecinema.svg" />
+                        </button>
+                        <button class="megabox-button"
+                            onclick="window.location.href='https://www.megabox.co.kr/booking'">
+                            <img height="24" src="megabox.svg" />
+                        </button>
+                        <button class="cineq-button"
+                            onclick="window.location.href='https://www.cineq.co.kr/Movie/Info?MovieCode=20249416'">
+                            <img height="24" src="cineq.svg" />
+                        </button>
+                    </div>
+                </div>
+                <img src="8.jpg" class="highlight-img" alt="청춘 18X2 너에게로 이어지는 길">
+            </div>
+        </section>
+        <h2>소개</h2>
+        <p class="introduction">“만일 그때 너에게 내 마음을 전했다면 지금의 난 달라졌을까?” 18년 전의 대만 타이난. 노래방에서 아르바이트를 하는 고등학생 ‘지미(허광한)’는, 배낭여행 중 잠시 일자리를 찾아 온 일본인 ‘아미(키요하라 카야)’를 만난다. 천진난만한 그녀와 지내는 동안 풋풋한 첫사랑의 감정이 자라는 ‘지미’. 그러나, 돌연 ‘아미’가 귀국을 하게 되고 갑작스런 이별에 충격을 받은 ‘지미’에게 ‘아미’는 서로의 꿈을 이룬 뒤 다시 만나자는 약속을 하고 떠난다. “나 지금, 너에게로 가고 있어” 시간이 지나 현재. 타이페이에서의 성공한 삶에 지쳐 고향에 돌아온 ‘지미’는, 예전에 ‘아미’로부터 받은 그림엽서를 발견한다. 첫사랑의 기억이 되살아나고 그날의 약속을 지키기 위해 그녀가 나고 자란 일본으로의 여행을 결심하는 ‘지미’. 도쿄부터 가마쿠라, 나가노, 니가타 그리고 ‘아미’의 고향 타다미로 향하는 도중 예기치 않았던 소중한 만남을 되풀이하며 ‘지미’는 ‘아미’와 보냈던 그 여름의 나날들을 떠올린다. 이윽고 다다른 ‘아미’의 고향에서 ‘지미’가 알게 된 18년 전 ‘아미’의 진짜 마음이란...</p>
+        <h2>감독</h2>
+        <p>후지이 미치히토</p>
+        <h2>출연</h2>
+        <p>허광한,키요하라 카야</p>
+        <h2>누적 관객수</h2>
+        <p>2.7만명</p>
+        <h2>평점</h2>
+        <p>8.55</p>
+    </main>
+    <footer>
+        <div class="inner">
+            <div class="footer-message">이 페이지는 교육적 목적으로 제작되었습니다.</div>
+            <div class="footer-contact">정준서 / joonseo1227@gachon.ac.kr</div>
+        </div>
+    </footer>
+    <script>
+        document.getElementById('book-button').addEventListener('click', function () {
+            var menu = document.getElementById('dropdown-menu');
+            if (menu.classList.contains('show')) {
+                menu.classList.remove('show');
+            } else {
+                menu.classList.add('show');
+            }
+        });
+
+        window.onclick = function (event) {
+            if (!event.target.matches('#book-button')) {
+                var dropdowns = document.getElementsByClassName('dropdown-menu');
+                for (var i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>
