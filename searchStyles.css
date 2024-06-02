@@ -2,7 +2,6 @@ body {
     display: flex;
     flex-direction: column;
     margin: 0;
-    height: 100vh;
 }
 
 .content {
@@ -11,10 +10,13 @@ body {
     align-items: center;
     flex-direction: column;
     flex: 1;
-    /* 남은 공간을 차지하게 함 */
+    padding: 20px;
 }
 
 .search-box {
+    width: 80%;
+    max-width: 400px;
+    height: 40px;
     display: flex;
     justify-content: center;
     margin-top: 80px;
@@ -22,8 +24,7 @@ body {
 }
 
 input {
-    height: 40px;
-    width: 400px;
+    width: 100%;
     background-color: #393939;
     border: none;
     outline: none;
@@ -35,19 +36,19 @@ input {
 
 #results {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
     margin: 20px;
     width: 100%;
     max-width: 1200px;
     justify-content: center;
+    gap: 40px;
 }
 
 .movie {
     width: 160px;
     text-align: center;
     transition: transform 0.2s ease;
-    margin-right: 32px;
-    margin-bottom: 64px;
+    margin: 0;
 }
 
 .movie img.poster {
@@ -61,4 +62,11 @@ input {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+@media (max-width: 800px) {
+    #results {
+        display: flex; 
+        flex-wrap: wrap;
+    }
 }
