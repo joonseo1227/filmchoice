@@ -10,19 +10,19 @@ FlimChoice는 HTML, CSS, JavaScript를 사용하여 처음으로 개발한 영�
 <br>
 
 ## 💻 PC 스크린샷
-<img src="https://github.com/user-attachments/assets/6176a5c4-0582-4ff1-9cf2-72e092b243e5" height="400"/>
-<img src="https://github.com/user-attachments/assets/c1808b41-ce53-4980-b326-59adf3cc2da6" height="400"/>
-<img src="https://github.com/user-attachments/assets/49a5cb22-bcf4-467d-8506-d7f7d15ab91c" height="400"/>
-<img src="https://github.com/user-attachments/assets/5ba9eed7-3147-4f50-bae2-8bf5992b49a6" height="400"/>
+<img src="https://github.com/user-attachments/assets/6176a5c4-0582-4ff1-9cf2-72e092b243e5" width="100%"/>
+<img src="https://github.com/user-attachments/assets/c1808b41-ce53-4980-b326-59adf3cc2da6" width="100%"/>
+<img src="https://github.com/user-attachments/assets/49a5cb22-bcf4-467d-8506-d7f7d15ab91c" width="100%"/>
+<img src="https://github.com/user-attachments/assets/5ba9eed7-3147-4f50-bae2-8bf5992b49a6" width="100%"/>
 
 <br>
 
 ## 📱 모바일 스크린샷
 
-<img src="https://github.com/user-attachments/assets/4ced4da6-ac20-4d95-aebd-061c166c8893" height="400"/>
-<img src="https://github.com/user-attachments/assets/e65c705b-9215-48a8-891f-91527e081790" height="400"/>
-<img src="https://github.com/user-attachments/assets/a5e3f519-28f8-4323-9c81-29edaf96a7d2" height="400"/>
-<img src="https://github.com/user-attachments/assets/3a9ebd11-ea88-4d4e-93c9-46fa9c4f3126" height="400"/>
+<img src="https://github.com/user-attachments/assets/4ced4da6-ac20-4d95-aebd-061c166c8893" width="45%"/>
+<img src="https://github.com/user-attachments/assets/e65c705b-9215-48a8-891f-91527e081790" width="45%"/>
+<img src="https://github.com/user-attachments/assets/a5e3f519-28f8-4323-9c81-29edaf96a7d2" width="45%"/>
+<img src="https://github.com/user-attachments/assets/3a9ebd11-ea88-4d4e-93c9-46fa9c4f3126" width="45%"/>
 
 <br>
 
